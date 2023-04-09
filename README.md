@@ -23,7 +23,8 @@ If you are a **clinican or radiologist** looking to analyze your own chest CT im
 ### How does AI-ROI work?
 To automate the process of liver segmentation and attenuation measurements, a deep learning model was developed in our AI system:  
 
-**nnU-Net-V1**
+**nnU-Net-V1** https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
+
 - [Installation instructions](documentation/installation_instructions.md)
 - [Dataset conversion](documentation/dataset_format.md)
 - [Usage instructions](documentation/how_to_use_nnunet.md)
