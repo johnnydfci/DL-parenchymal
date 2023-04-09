@@ -2,13 +2,13 @@
 
 ## Why AI-ROI is purposed?
 
-Background and objectives: Unenhanced liver attenuation alone is highly specific to indicate moderate-to-severe steatosis on CT images. Typically, the CT attenuation is measured by radiologists on a circular region of interest (ROI) to represent the whole-liver fat content. Yet, it is time-consuming and requires an automated tool. 
+Unenhanced liver attenuation alone is highly specific to indicate moderate-to-severe steatosis on CT images. Typically, the CT attenuation is measured by radiologists on a circular region of interest (ROI) to represent the whole-liver fat content. Yet, this is time-consuming and thus requires an automated tool. 
 
 ## What is AI-ROI?
 
 Here, we develop a fully automated artificial-intelligence (AI) system using deep learning auto-segmentation to measure liver attenuation on AI-selected ROIs, called AI-ROI, and to categorize moderate-to-severe steatosis using AI-ROI attention. The AI-ROI attenuation was derived from three circular portions (ROI) of the parenchymal region on the automated segmentation. Using the AI-ROI method, liver attenuation was obtained while eliminating the need for laborious and subjective selections of manual ROI.
 
-![AI-ROI overview](https://user-images.githubusercontent.com/73850754/230751137-36bc7f07-a810-46cb-aedf-c626eec1b449.png)
+![AI-ROI overview](https://user-images.githubusercontent.com/73850754/230751205-b5de553a-2d71-42ba-9b6a-d788d6d0f258.png)
 
 
 ## What is the novelty of AI-ROI?
@@ -21,10 +21,9 @@ If you are an **AI researcher** developing segmentation methods, AI-ROI provides
 If you are a **clinican or radiologist** looking to analyze your own chest CT images, AI-ROI provides an out-of-the-box solution to derive the unenhanced liver attenuation to assess moderate-to-severe steatosis on multicenter cross-national cohort.
 
 ### How does AI-ROI work?
-To automate the process of liver segmentation and attenuation measurements, a deep learning model was developed in our AI system:  nnU-Net-V1
+To automate the process of liver segmentation and attenuation measurements, a deep learning model was developed in our AI system:  
 
-### How to infer CT images using the trained nnU-Net?
-Read these:
+**nnU-Net-V1**
 - [Installation instructions](documentation/installation_instructions.md)
 - [Dataset conversion](documentation/dataset_format.md)
 - [Usage instructions](documentation/how_to_use_nnunet.md)
