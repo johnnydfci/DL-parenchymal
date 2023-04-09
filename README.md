@@ -8,7 +8,8 @@ Background and objectives: Unenhanced liver attenuation alone is highly specific
 
 Here, we develop a fully automated artificial-intelligence (AI) system using deep learning auto-segmentation to measure liver attenuation on AI-selected ROIs, called AI-ROI, and to categorize moderate-to-severe steatosis using AI-ROI attention. The AI-ROI attenuation was derived from three circular portions (ROI) of the parenchymal region on the automated segmentation. Using the AI-ROI method, liver attenuation was obtained while eliminating the need for laborious and subjective selections of manual ROI.
 
-![AI-ROI overview](documentation/nnU-Net_overview.png)
+![AI-ROI overview](https://user-images.githubusercontent.com/73850754/230751137-36bc7f07-a810-46cb-aedf-c626eec1b449.png)
+
 
 ## What is the novelty of AI-ROI?
 
