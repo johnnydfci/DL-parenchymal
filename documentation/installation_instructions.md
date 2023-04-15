@@ -14,8 +14,9 @@ The nnU-Net v1 was implemented and tested on Linux (Ubuntu 18.04) with a RTX 306
 
 - 5-  ```  nnUNet_raw_data_base/nnUNet_train_data_raw/ ``` # download training data into the dir
 
-- 6-  ``` file_op_to_prepare_training_nnunet.ipynb  #  prepare data into the required format of nnunet```
-      ```python nnunet/dataset_conversion/521_liver-plain.py   #   prepare data into the required format of nnunet```
+- 6-  ``` file_op_to_prepare_training_nnunet.ipynb  #  prepare data into the required format of nnunet: 1/2 step```
+
+      python nnunet/dataset_conversion/521_liver-plain.py   #   prepare data into the required format of nnunet 2/2 step```
 - 7- set nnunet enviornment 
 
                 ``` cd /home/---(user name)/.bashrc                
