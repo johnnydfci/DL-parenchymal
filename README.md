@@ -6,11 +6,11 @@ DL-parenchymal method can automatically select parenchymal portion for measuring
 
 ### Implementation scripts
 
-1. nnU-Net-V1 for liver segmentation: [implementation.md](documentation/installation_instructions.md)
+1. nnU-Net-V1 for liver segmentation: [Implementation_steps.md](documentation/Implementation_steps.md)
 
-2. use auto-segmentation to select parenchyma and measure attenuation: [implementation.ipynb](DL_seg_to_select_parenchyma.ipynb)
+2. use auto-segmentation to select parenchyma and measure attenuation: [DL_seg_to_select_parenchyma.ipynb](DL_seg_to_select_parenchyma.ipynb)
 
-3. a threshold of DL-parenchymal attenuation < 40 HU was applied to categorize moderate-to-severe hepatic steatosis: [implementation.ipynb](stats_to_figure/230402_github_Figure_S5_cofusion_matrix_95CI.ipynb)
+3. a threshold of DL-parenchymal attenuation < 40 HU was applied to categorize moderate-to-severe hepatic steatosis: [230402_github_Figure_S5_cofusion_matrix_95CI.ipynb](stats_to_figure/230402_github_Figure_S5_cofusion_matrix_95CI.ipynb)
 
 ## Data availability (freely released to the public!)
 
