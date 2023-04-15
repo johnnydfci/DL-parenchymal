@@ -19,12 +19,9 @@ Previous studies developed automated methods to measure CT attenuation, but thei
 ### How does AI-ROI work?
 **1. nnU-Net-V1 for liver segmentation**
 
-The model is developed using this repository and applied into our DL system 
-https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
+- [Details of model implementation](documentation/installation_instructions.md)
 
-- [Installation instructions](documentation/installation_instructions.md)
-- [Dataset conversion](documentation/dataset_format.md)
-- [Usage instructions](documentation/how_to_use_nnunet.md)
+The model is developed using this repository and applied into our DL system https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
 
 **2.  DL-parenchymal attenuation measurement**
 
