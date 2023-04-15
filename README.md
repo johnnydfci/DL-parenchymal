@@ -28,11 +28,11 @@ https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
 
 **2.  DL-parenchymal attenuation measurement**
 
-- Deep learning to select liver parenchyma for measuring attenuation: [DL_seg_to_select_parenchyma.ipynb](DL_seg_to_select_parenchyma.ipynb)
+- [DL_seg_to_select_parenchyma.ipynb](DL_seg_to_select_parenchyma.ipynb): Deep learning to select liver parenchyma for measuring attenuation
 
 **3.  DL-parenchymal steatosis classification**
 
-- a threshold of DL-based attenuation < 40 HU was applied to categorize moderate-to-severe hepatic steatosis: [ DL-parenchymal cofusion matrix.ipynb](stats_to_figure/230402_github_Figure_S5_cofusion_matrix_95CI.ipynb)
+- [ DL-parenchymal cofusion matrix.ipynb](stats_to_figure/230402_github_Figure_S5_cofusion_matrix_95CI.ipynb): a threshold of DL-based attenuation < 40 HU was applied to categorize moderate-to-severe hepatic steatosis
 
 ### Where does AI-ROI perform well and where does it not perform?
 AI-ROI only derives liver attenuation on unenhanced chest CT images, such as the routine screening for lung cancer or COVID-19. Abdominal CT or contrast-enhanced CT images are not applicable.
