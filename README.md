@@ -6,7 +6,7 @@ DL-parenchymal method can automatically select parenchymal portion for measuring
 
 ### Implementation scripts
 
-1. nnU-Net-V1 for liver segmentation: [implementation.md](documentation/installation_instructions.md)
+1. nnU-Net-V1 for liver segmentation: [implementation.md](documentation/Implementation_steps.md)
 
 2. use auto-segmentation to select parenchyma and measure attenuation: [implementation.ipynb](DL_seg_to_select_parenchyma.ipynb)
 
