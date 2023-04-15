@@ -1,7 +1,7 @@
-# System requirements
+# A nnU-Net v1 for liver segmenation
 
 ## Operating System and Hardware requirements
-For the AI-ROI method, nnU-Net has been tested on Linux (Ubuntu 18.04) with a RTX 3060 GPU (12GB VRAM).
+ on Linux (Ubuntu 18.04) with a RTX 3060 GPU (12GB VRAM).
 
 
 # Installation instructions
