@@ -1,7 +1,10 @@
 # A nnU-Net v1 for liver segmenation
 
+The nnU-Net v1 model is developed using this repository and applied into our DL system https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
+
 ## Implementation instructions
-The nnU-Net v1 was implemented and tested on Linux (Ubuntu 18.04) with a RTX 3060 GPU (12GB VRAM).
+The nnU-Net v1 was implemented and tested on Linux (Ubuntu 18.04) with a RTX 3060 GPU (12GB VRAM). 
+
 
 ### Environment setup
 
