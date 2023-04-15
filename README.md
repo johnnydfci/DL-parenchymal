@@ -1,34 +1,34 @@
-# Welcome to the AI-ROI!
+# Deep learning to select liver parenchyma for categorizing hepatic steatosis on multinational chest CT
 
-## Why AI-ROI is purposed?
+## Background and objectives
 
-Unenhanced liver attenuation alone is highly specific to indicate moderate-to-severe steatosis on CT images. Typically, the CT attenuation is measured by radiologists on a circular region of interest (ROI) to represent the whole-liver fat content. Yet, this is time-consuming and thus requires an automated tool. 
+Unenhanced liver attenuation alone is highly specific to indicate moderate-to-severe steatosis on CT images. Typically, the CT attenuation is measured by radiologists on parenchymal portions to represent the whole-liver fat content. Yet, this is time-consuming and thus requires an automated tool. Here, we aim to develop a deep-learning (DL) system that can automatically select parenchymal regions for measuring liver attenuation and categorizing moderate-to-severe hepatic steatosis in multinational unenhanced chest CT images.
 
-## What is AI-ROI?
+## Materials (freely released to the public!)
 
-Here, we develop a fully automated artificial-intelligence (AI) system using deep learning auto-segmentation to measure liver attenuation on AI-selected ROIs, called AI-ROI, and to categorize moderate-to-severe steatosis using AI-ROI attention. The AI-ROI attenuation was derived from three circular portions (ROI) of the parenchymal region on the automated segmentation. Using the AI-ROI method, liver attenuation was obtained while eliminating the need for laborious and subjective selections of manual ROI.
+This retrospective study included 1,014 CT images from cross-national databases. All CT images were reformatted to the Neuroimaging Informatics Technology Initiative (NIfTI) format, and linear interpolations were employed to resample them to a consistent voxel spacing of 0.7 x 0.7 x 2.5 mm/pixel. Curated CT images and ground truths can be freely downloaded by Google Drive https://drive.google.com/drive/folders/1-g_zJeAaZXYXGqL1OeF6pUjr6KB0igJX or Baidu Wangpan https://pan.baidu.com/s/1nRv-FJU4HtQ4nXi9H9145Q?pwd=2022 (passcode: 2022). 
 
-![AI-ROI overview](https://user-images.githubusercontent.com/73850754/230751205-b5de553a-2d71-42ba-9b6a-d788d6d0f258.png)
+## Methods
+Firstly, imaged livers are segmented by a nn-unet model. Secondly, DL-based automated methods are purposed for measuring liver attenuation, namely DL-volumetric, DL-axial, and DL-parenchymal attenuation.The DL-parenchymal method leverages 3D auto-segmentation to place circular portions on the liver parenchyma. The center of the circular portion is positioned 20 mm to the right of the leftmost pixel on the axial slice. A circular area of approximately 20 mm² is selected to encompass the full spectrum of liver fat, with one region per slice and the three largest slices chosen at a distance of 5 mm.
 
+![Deep learning system overview](https://user-images.githubusercontent.com/73850754/230751205-b5de553a-2d71-42ba-9b6a-d788d6d0f258.png)
 
-## What is the novelty of AI-ROI?
+Previous studies developed automated methods to measure CT attenuation, but their accuracy was limited due to the inclusion of non-parenchymal regions 26–30. In contrast, our study addressed these limitations by developing the DL-parenchymal method, which used deep learning-based liver segmentation to automatically select parenchymal portions. This novel method achieved expert-level accuracy, stable generalizability across various centers and countries, and independent objectivity over the inter-reader variability among human experts. By automating the parenchymal selection, our approach represented a significant improvement in the accuracy and efficiency of hepatic steatosis detection using CT scans.
 
-Previous studies developed automated methods to measure CT attenuation, but their accuracy was limited due to the inclusion of non-parenchymal regions. In contrast, the AI-ROI method addressed these limitations by using AI auto-segmentation to automatically select ROI portions of the liver parenchyma, eliminating the need for manual selection. Notably, AI-ROI method achieved expert-level accuracy, making it a reliable approach for population-based screening of hepatic steatosis using non-enhanced chest CT scans. By overcoming these limitations, our approach represented a significant improvement in the accuracy and efficiency of hepatic steatosis detection using CT scans.
-
-## What can AI-ROI do for you?
-If you are an **AI researcher** developing segmentation methods, AI-ROI provides 1,014 unenhanced chest CT images and 3D liver masks for your development or transfer learning.
-
-If you are a **clinican or radiologist** looking to analyze your own chest CT images, AI-ROI provides an out-of-the-box solution to derive the unenhanced liver attenuation to assess moderate-to-severe steatosis on multicenter cross-national cohort.
 
 ### How does AI-ROI work?
-To automate the process of liver segmentation and attenuation measurements, a deep learning model was developed in our AI system:  
+**1. nnU-Net-V1 for liver segmentation**
 
-**nnU-Net-V1** https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
+The model is developed using this repository and applied into our DL system 
+https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1
 
 - [Installation instructions](documentation/installation_instructions.md)
 - [Dataset conversion](documentation/dataset_format.md)
 - [Usage instructions](documentation/how_to_use_nnunet.md)
+- 
+**2.  DL-parenchymal attenuation measurement**
 
+**3.  DL-parenchymal steatosis classification**a threshold of DL-based attenuation < 40 HU was applied to categorize moderate-to-severe hepatic steatosis
 
 ### Where does AI-ROI perform well and where does it not perform?
 AI-ROI only derives liver attenuation on unenhanced chest CT images, such as the routine screening for lung cancer or COVID-19. Abdominal CT or contrast-enhanced CT images are not applicable.
