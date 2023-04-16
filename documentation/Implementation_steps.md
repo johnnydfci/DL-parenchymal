@@ -4,9 +4,9 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
 
 ### Environment setup
 
-```conda create -n dl_parenchymal python=3.8.5``` # create a conda environment with python3.8.5; ```conda remove -n dl_parenchymal --all ```if you want to delete this conda environment
+```conda create -n lipa python=3.8.5``` # create a conda environment with python3.8.5; ```conda remove -n lipa --all ```if you want to delete this conda environment
 
-```conda activate dl_parenchymal```  # activate the conda environment
+```conda activate lipa```  # activate the conda environment
 
 ```conda install nb_conda_kernels```  # Install jupyter notebook
 
