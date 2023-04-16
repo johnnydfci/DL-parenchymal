@@ -45,12 +45,10 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
 
 -  ``` file_op_to_prepare_training_nnunet.ipynb```  #  prepare data into the required format of nnunet: 1/2 step
 
-      ```python nnunet/dataset_conversion/521_liver-plain.py```   #   prepare data into the required format of nnunet 2/2 step
+     ```python nnunet/dataset_conversion/521_liver-plain.py```   #   prepare data into the required format of nnunet 2/2 step
 
--  pre-process the data using nnunet scripts              
--   
-    ```nnUNet_plan_and_preprocess  -t 521 --verify_dataset_integrity```   
+         
+-   ```nnUNet_plan_and_preprocess  -t 521 --verify_dataset_integrity```    # pre-process the data using nnunet scripts  
     
--  training scripts 
 -  
    ```nnUNet_train 3d_fullres nnUNetTrainerV2 521 1```  # nnunet training, the '1' stands for training 1st fold of the five-fold cross validation
