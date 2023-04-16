@@ -13,6 +13,8 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
 ```pip3 install -r requirements.txt``` # Once you change directories into the root path of the project
 
  ```pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113```# install pytorch under CUDA 11.3
+ 
+ ```pip3 install nnunet==1.7.1```# install nnunet==1.7.1
 
 ### Data and file paths prepare
 
