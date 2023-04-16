@@ -2,7 +2,7 @@
 
 ### Method introduction
 
-DL-parenchymal method can automatically select parenchymal portion for measuring liver attenuation on CT images. This novel method can enhance incidental assessments of moderate-to-severe hepatic steatosis detection using unenhanced chest CT images. Details of the method can be seen in this [text.](documentation/Method_introduction.md)
+DL-parenchymal method can automatically select parenchymal portion for measuring liver attenuation on CT images. This novel method can enhance incidental assessments of moderate-to-severe hepatic steatosis detection using unenhanced chest CT images. [Method details.md](documentation/Method_introduction.md)
 
 ### Implementation steps
 
