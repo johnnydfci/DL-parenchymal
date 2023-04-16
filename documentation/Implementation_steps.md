@@ -16,6 +16,15 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
  
  ```pip3 install nnunet==1.7.1```# install nnunet==1.7.1
  
+ ### nnunet paths setup 
+ 
+ -  set nnunet enviornment path, replace the following with your own user name and repo dir
+
+                ``` cd /home/---(user name)/.bashrc                
+                export nnUNet_raw_data_base="---(repo dir)/nnUNet_raw_data_base"
+                export nnUNet_preprocessed="---(repo dir)/nnUNet_preprocessed"
+                export RESULTS_FOLDER="---(repo dir)/nnUNet_trained_models"                ```                
+ 
  ### nnunet scripts to segment new CT images
  
  ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download test data into the dir
@@ -37,19 +46,11 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
 -  ``` file_op_to_prepare_training_nnunet.ipynb```  #  prepare data into the required format of nnunet: 1/2 step
 
       ```python nnunet/dataset_conversion/521_liver-plain.py```   #   prepare data into the required format of nnunet 2/2 step
--  set nnunet enviornment path, replace the following with your own user name and repo dir
 
-                ``` cd /home/---(user name)/.bashrc                
-                export nnUNet_raw_data_base="---(repo dir)/nnUNet_raw_data_base"
-                export nnUNet_preprocessed="---(repo dir)/nnUNet_preprocessed"
-                export RESULTS_FOLDER="---(repo dir)/nnUNet_trained_models"                ```
-                
--  set nnunet data path                
+-  pre-process the data using nnunet scripts              
 -   
     ```nnUNet_plan_and_preprocess  -t 521 --verify_dataset_integrity```   
     
 -  training scripts 
 -  
-   ```nnUNet_train 3d_fullres nnUNetTrainerV2 521 1```  # nnunet training, the last number stands for only training 1st fold of the five-fold cross validation
-
-
+   ```nnUNet_train 3d_fullres nnUNetTrainerV2 521 1```  # nnunet training, the '1' stands for training 1st fold of the five-fold cross validation
