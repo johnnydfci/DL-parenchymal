@@ -27,9 +27,11 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
  
  ### nnunet scripts to segment new CT images
  
- ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download test data into the dir
+ ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download test data into the dir and unzip it
  
  ```file_op_to_infer_by_nnunet.ipynb```  # prepare data into the required format, where each nifty image name has to end with '0000.nii.gz'
+ 
+  ```nnUNet_trained_models/ ``` # download pre-trained model into the dir and unzip it
    
  ```nnUNet_predict -i $nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii/ -o  $nnUNet_raw_data_base/nnUNet_test_data/test_seg_in_nii_raw/ -t 521 -m 3d_fullres -f 1```
   
