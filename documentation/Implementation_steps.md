@@ -15,8 +15,20 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
  ```pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113```# install pytorch under CUDA 11.3
  
  ```pip3 install nnunet==1.7.1```# install nnunet==1.7.1
+ 
+ ### nnunet scripts to segment new CT images
+ 
+ ```file_op_to_infer_by_nnunet.ipynb```  #  prepare data into the required format of nnunet
+   
+ ```nnUNet_predict -i $nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii/ -o  $nnUNet_raw_data_base/nnUNet_test_data/test_seg_in_nii_raw/ -t 521 -m 3d_fullres -f 1```
+  
 
-### Data and file paths prepare
+### segmentation post-process and performance compute
+```liver_seg_curated_into_top1_mask.ipynb``` #  post-process the segmented mask to retain the biggest connected component
+```liver_seg_various_accuracy_compute.ipynb``` # compute segmentation performances, i.e., dsc, jc, hd, assd 
+
+
+### -optional: training your own model 
 
 -  ```  nnUNet_raw_data_base/nnUNet_train_data_raw/ ``` # download training data into the dir
 
@@ -30,15 +42,12 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
                 export nnUNet_preprocessed="---(repo dir)/nnUNet_preprocessed"
                 export RESULTS_FOLDER="---(repo dir)/nnUNet_trained_models"                ```
                 
--  set nnunet data path                 
-    ```nnUNet_plan_and_preprocess  -t 521 --verify_dataset_integrity```             
-### nnunet scripts for training 
-              
- - optional ```nnUNet_train 3d_fullres nnUNetTrainerV2 521 1```  # nnunet training, the last number stands for only training 1st fold of the five-fold cross validation
+-  set nnunet data path                
+-   
+    ```nnUNet_plan_and_preprocess  -t 521 --verify_dataset_integrity```   
+    
+-  training scripts 
+-  
+   ```nnUNet_train 3d_fullres nnUNetTrainerV2 521 1```  # nnunet training, the last number stands for only training 1st fold of the five-fold cross validation
 
-### nnunet scripts to segment liver (infer)
- ```nnUNet_predict -i $nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii/ -o  $nnUNet_raw_data_base/nnUNet_test_data/test_seg_in_nii_raw/ -t 521 -m 3d_fullres -f 1```
 
-### segmentation post-process and performance compute
-```liver_seg_curated_into_top1_mask.ipynb``` #  post-process the segmented mask to retain the biggest connected component
-```liver_seg_various_accuracy_compute.ipynb``` # compute segmentation performances, i.e., dsc, jc, hd, assd 
