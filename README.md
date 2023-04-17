@@ -1,10 +1,10 @@
 # Deep learning to select liver parenchyma for categorizing hepatic steatosis on multinational chest CT
 
-Welcome to our GitHub repository for the DL-parenchymal method, an automated deep learning system for detecting moderate-to-severe hepatic steatosis on unenhanced chest CT images. This repository provides the implementation of our method, including a nnunet for liver segmentation, the script to pick parenchymal portions using DL auto-segmentation, as well as the dataset used for development and validation.
+Welcome to our GitHub repository for the DL-parenchymal method, an automated deep-learning (DL) system for detecting moderate-to-severe hepatic steatosis on unenhanced chest CT images. This repository provides the implementation of our method, including a nnunet for liver segmentation, the script to pick parenchymal portions using DL auto-segmentation, as well as the dataset used for development and validation.
 
 ### Method introduction
 
-DL-parenchymal method can automatically select parenchymal portion for measuring liver attenuation on CT images. This novel method can enhance incidental assessments of moderate-to-severe hepatic steatosis detection using unenhanced chest CT images. [Method details.md](documentation/Method_introduction.md)
+The DL-parenchymal method can automatically select the parenchymal portion for measuring liver attenuation on CT images. This novel method can enhance incidental assessments of moderate-to-severe hepatic steatosis detection using unenhanced chest CT images. [Method details.md](documentation/Method_introduction.md)
 
 ### Implementation steps
 
@@ -22,7 +22,9 @@ Of note, our method only derives liver attenuation on unenhanced chest CT images
 
 ## Publication
 
-preprint: A version of this DL system has been uploaded to arXiv as a preprint with a perpetual and non-exclusive license and a DOI (https://doi.org/10.48550/arXiv.2210.15149).
+Preprint: A version of this DL system has been uploaded to arXiv as a preprint with a perpetual and non-exclusive license and a DOI (https://doi.org/10.48550/arXiv.2210.15149).
+
+Peer-reviewed article: to be updated
 
 ## License
 
