@@ -27,11 +27,11 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
  
  ### nnunet scripts to segment new CT images
  
- ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download test data into the dir and unzip it
+ ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download open-source data into the dir
  
  ```file_op_to_infer_by_nnunet.ipynb```  # prepare data into the required format, where each nifty image name has to end with '0000.nii.gz'
  
-  ```nnUNet_trained_models/ ``` # download pre-trained model into the dir, required paths are shown in this [screenshot.png](Pre_trained_model_paths.png)
+  ```nnUNet_trained_models/ ``` # download pre-trained model from Gdrive or baiduwangpan ```Files_for_running_github/nnUNet_trained_models.zip``` dir. This model was trained with 319 CT images. The required paths are shown in this [screenshot.png](Pre_trained_model_paths.png)
    
  ```nnUNet_predict -i $nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii/ -o  $nnUNet_raw_data_base/nnUNet_test_data/test_seg_in_nii_raw/ -t 521 -m 3d_fullres -f 1```
   
@@ -43,7 +43,7 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
 
 ### -optional: training your own model 
 
--  ```  nnUNet_raw_data_base/nnUNet_train_data_raw/ ``` # download training data into the dir,required paths are shown in this [screenshot.png](Images_paths_for_training.png)
+-  ```  nnUNet_raw_data_base/nnUNet_train_data_raw/ ``` # download training data into the dir. 5 CT images can be a toy example, which can be downloaded from Gdrive or baiduwangpan ```Files_for_running_github/nnUNet_train_data_raw.zip``` dir. Required paths are shown in this [screenshot.png](Images_paths_for_training.png)
 
 -  ``` file_op_to_prepare_training_nnunet.ipynb```  #  prepare data into the required format of nnunet: 1/2 step
 
