@@ -1,6 +1,6 @@
-# A nnU-Net v1 for liver segmenation
+# Deep learning model for liver segmentation
 
-The nnU-Net v1 model is developed using this repository and applied into our DL system https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1. The nnU-Net v1 was implemented and tested on Linux (Ubuntu 18.04) with a RTX 3060 GPU (12GB VRAM). 
+A nnU-Net v1 model is developed using this repository https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1. The nnU-Net v1 was implemented and tested on Linux (Ubuntu 18.04) with an RTX 3060 GPU (12GB VRAM). 
 
 ### Environment setup
 
@@ -18,7 +18,7 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
  
  ### nnunet paths setup 
  
- -  set nnunet enviornment path, replace the following with your own user name and repo dir
+ -  set nnunet environment path, replace the following with your own user name and repo dir
 
                 ``` cd /home/---(user name)/.bashrc                
                 export nnUNet_raw_data_base="---(repo dir)/nnUNet_raw_data_base"
@@ -27,9 +27,9 @@ The nnU-Net v1 model is developed using this repository and applied into our DL 
  
  ### nnunet scripts to segment new CT images
  
- ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download open-source data into the dir, one image is stored in github as an example
+ ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download open-source data into the dir, one image is stored in our repository as an example
  
- ```file_op_to_infer_by_nnunet.ipynb```  # prepare data into the required format, where each nifty image name has to end with '0000.nii.gz'
+ ```file_op_to_infer_by_nnunet.ipynb```  # Prepare data into the required format, where each nifty image name has to end with '0000.nii.gz'
  
   ```nnUNet_trained_models/ ``` # download pre-trained model from Gdrive or baiduwangpan ```Files_for_running_github/nnUNet_trained_models.zip``` dir. This model was trained with 319 CT images. The required paths are shown in this [screenshot.png](Pre_trained_model_paths.png)
    
