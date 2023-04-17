@@ -22,6 +22,8 @@ Of note, our method only derives liver attenuation on unenhanced chest CT images
 
 ## Publication
 
-tbd
+preprint: A version of this DL system has been uploaded to arXiv as a preprint with a perpetual and non-exclusive license and a DOI (https://doi.org/10.48550/arXiv.2210.15149).
 
 ## License
+
+Apache License, Version 2.0
