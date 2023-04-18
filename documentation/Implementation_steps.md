@@ -29,7 +29,7 @@ A nnU-Net v1 model is developed using this repository https://github.com/MIC-DKF
  
  ```nnUNet_raw_data_base/nnUNet_test_data/test_img_in_nii_raw/ ``` # download open-source data into the dir, one image is stored in our repository as an example
  
- ```file_op_to_infer_by_nnunet.ipynb```  # Prepare data into the required format, where each nifty image name has to end with '0000.nii.gz'
+ ```file_op_to_infer_by_nnunet.ipynb```  # prepare data into the required format, where each nifty image name has to end with '0000.nii.gz'
  
   ```nnUNet_trained_models/ ``` # download pre-trained model from Gdrive or baiduwangpan ```Files_for_running_github/nnUNet_trained_models.zip``` dir. This model was trained with 319 CT images. The required paths are shown in this [screenshot.png](Pre_trained_model_paths.png)
    
