@@ -19,11 +19,14 @@ A nnU-Net v1 model is developed using this repository https://github.com/MIC-DKF
  ### nnunet paths setup 
  
  -  set nnunet environment path, replace the following with your own user name and repo dir
+ -  suppose user name is 'zhongyi' and repo dir is '/home/zhongyi/Desktop/nn-unet_train'
 
-                ``` cd /home/---(user name)/.bashrc                
-                export nnUNet_raw_data_base="---(repo dir)/nnUNet_raw_data_base"
-                export nnUNet_preprocessed="---(repo dir)/nnUNet_preprocessed"
-                export RESULTS_FOLDER="---(repo dir)/nnUNet_trained_models"                ```                
+                ```
+                cd /home/zhongyi/.bashrc     
+                       
+                export nnUNet_raw_data_base="/home/zhongyi/Desktop/nn-unet_train/nnUNet_raw_data_base"
+                export nnUNet_preprocessed="/home/zhongyi/Desktop/nn-unet_train/nnUNet_preprocessed"
+                export RESULTS_FOLDER="/home/zhongyi/Desktop/nn-unet_train/nnUNet_trained_models"                ```                
  
  ### nnunet scripts to segment new CT images
  
